@@ -145,7 +145,7 @@ class Index extends React.Component {
                   '<\/br><\/br> 扫码找我',
                   image: siteConfig.baseUrl + 'img/qq_qun.png',
                   imageAlign: 'left',
-                  title: '欢迎加入我',
+                  title: '欢迎加入',
                 },
               ]}
             />
