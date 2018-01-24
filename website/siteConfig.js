@@ -22,10 +22,10 @@ const siteConfig = {
   baseUrl: '/content/' /* base url for your project */,
   projectName: 'react-navigation',
   headerLinks: [
-    {doc: 'getting-started', label: 'Docs'},
-    {doc: 'doc4', label: 'API'},
-    {page: 'help', label: 'Help'},
-    {blog: true, label: 'Blog'},
+    {doc: 'getting-started', label: '文档'},
+    {blog: true, label: '博客'},
+    {doc: 'doc4', label: 'Demo'},
+    {href: 'https://github.com/react-navigation/react-navigation', label: 'GitHub'},
   ],
   users,
   /* path to images for header/footer */
