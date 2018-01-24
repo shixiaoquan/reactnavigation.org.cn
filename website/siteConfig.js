@@ -24,8 +24,8 @@ const siteConfig = {
   headerLinks: [
     {doc: 'getting-started', label: '文档'},
     {blog: true, label: '博客'},
-    {doc: 'doc4', label: 'Demo'},
-    {href: 'https://github.com/react-navigation/react-navigation', label: 'GitHub'},
+    {doc: 'doc4', label: 'Demo', external: true},
+    {href: 'https://github.com/react-navigation/react-navigation', label: 'GitHub', external: true},
   ],
   users,
   /* path to images for header/footer */
