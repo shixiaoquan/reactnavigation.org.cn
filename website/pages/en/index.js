@@ -141,7 +141,8 @@ class Index extends React.Component {
             <GridBlock
               contents={[
                 {
-                  content: '目前文档只有我一个人翻译，挺多的，欢迎感兴趣的小伙伴加入😊<\/br> 扫码找我',
+                  content: '目前文档只有我一个人翻译，挺多的<\/br>欢迎感兴趣的小伙伴加入😊' +
+                  '<\/br><\/br> 扫码找我',
                   image: siteConfig.baseUrl + 'img/qq_qun.png',
                   imageAlign: 'left',
                   title: '欢迎加入我',
