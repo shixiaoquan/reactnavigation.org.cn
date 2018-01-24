@@ -96,73 +96,73 @@ class Index extends React.Component {
       <div>
         <HomeSplash language={language} />
         <div className="mainContainer">
-          <Container padding={['bottom', 'top']}>
-            <GridBlock
-              align="center"
-              contents={[
-                {
-                  content: 'This is the content of my feature',
-                  image: siteConfig.baseUrl + 'img/docusaurus.svg',
-                  imageAlign: 'top',
-                  title: 'Feature One',
-                },
-                {
-                  content: 'The content of my second feature',
-                  image: siteConfig.baseUrl + 'img/docusaurus.svg',
-                  imageAlign: 'top',
-                  title: 'Feature Two',
-                },
-              ]}
-              layout="fourColumn"
-            />
-          </Container>
+          {/*<Container padding={['bottom', 'top']}>*/}
+            {/*<GridBlock*/}
+              {/*align="center"*/}
+              {/*contents={[*/}
+                {/*{*/}
+                  {/*content: 'This is the content of my feature',*/}
+                  {/*image: siteConfig.baseUrl + 'img/docusaurus.svg',*/}
+                  {/*imageAlign: 'top',*/}
+                  {/*title: 'Feature One',*/}
+                {/*},*/}
+                {/*{*/}
+                  {/*content: 'The content of my second feature',*/}
+                  {/*image: siteConfig.baseUrl + 'img/docusaurus.svg',*/}
+                  {/*imageAlign: 'top',*/}
+                  {/*title: 'Feature Two',*/}
+                {/*},*/}
+              {/*]}*/}
+              {/*layout="fourColumn"*/}
+            {/*/>*/}
+          {/*</Container>*/}
 
-          <div
-            className="productShowcaseSection paddingBottom"
-            style={{textAlign: 'center'}}>
-            <h2>Feature Callout</h2>
-            <MarkdownBlock>These are features of this project</MarkdownBlock>
-          </div>
+          {/*<div*/}
+            {/*className="productShowcaseSection paddingBottom"*/}
+            {/*style={{textAlign: 'center'}}>*/}
+            {/*<h2>Feature Callout</h2>*/}
+            {/*<MarkdownBlock>These are features of this project</MarkdownBlock>*/}
+          {/*</div>*/}
 
-          <Container padding={['bottom', 'top']} background="light">
-            <GridBlock
-              contents={[
-                {
-                  content: 'Talk about learning how to use this',
-                  image: siteConfig.baseUrl + 'img/docusaurus.svg',
-                  imageAlign: 'right',
-                  title: 'Learn How',
-                },
-              ]}
-            />
-          </Container>
+          {/*<Container padding={['bottom', 'top']} background="light">*/}
+            {/*<GridBlock*/}
+              {/*contents={[*/}
+                {/*{*/}
+                  {/*content: 'Talk about learning how to use this',*/}
+                  {/*image: siteConfig.baseUrl + 'img/docusaurus.svg',*/}
+                  {/*imageAlign: 'right',*/}
+                  {/*title: 'Learn How',*/}
+                {/*},*/}
+              {/*]}*/}
+            {/*/>*/}
+          {/*</Container>*/}
 
           <Container padding={['bottom', 'top']} id="try">
             <GridBlock
               contents={[
                 {
-                  content: 'Talk about trying this out',
-                  image: siteConfig.baseUrl + 'img/docusaurus.svg',
+                  content: '目前文档只有我一个人翻译，挺多的，欢迎感兴趣的小伙伴加入😊<\/br> 扫码找我',
+                  image: siteConfig.baseUrl + 'img/qq_qun.png',
                   imageAlign: 'left',
-                  title: 'Try it Out',
+                  title: '欢迎加入我',
                 },
               ]}
             />
           </Container>
 
-          <Container padding={['bottom', 'top']} background="dark">
-            <GridBlock
-              contents={[
-                {
-                  content:
-                    'This is another description of how this project is useful',
-                  image: siteConfig.baseUrl + 'img/docusaurus.svg',
-                  imageAlign: 'right',
-                  title: 'Description',
-                },
-              ]}
-            />
-          </Container>
+          {/*<Container padding={['bottom', 'top']} background="dark">*/}
+            {/*<GridBlock*/}
+              {/*contents={[*/}
+                {/*{*/}
+                  {/*content:*/}
+                    {/*'This is another description of how this project is useful',*/}
+                  {/*image: siteConfig.baseUrl + 'img/docusaurus.svg',*/}
+                  {/*imageAlign: 'right',*/}
+                  {/*title: 'Description',*/}
+                {/*},*/}
+              {/*]}*/}
+            {/*/>*/}
+          {/*</Container>*/}
 
           <div className="productShowcaseSection paddingBottom">
             <h2>{"Who's Using This?"}</h2>
