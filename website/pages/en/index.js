@@ -165,20 +165,20 @@ class Index extends React.Component {
             {/*/>*/}
           {/*</Container>*/}
 
-          <div className="productShowcaseSection paddingBottom">
-            <h2>{"Who's Using This?"}</h2>
-            <p>This project is used by all these people</p>
-            <div className="logos">{showcase}</div>
-            <div className="more-users">
-              <a
-                className="button"
-                href={
-                  siteConfig.baseUrl + this.props.language + '/' + 'users.html'
-                }>
-                More {siteConfig.title} Users
-              </a>
-            </div>
-          </div>
+          {/*<div className="productShowcaseSection paddingBottom">*/}
+            {/*<h2>{"Who's Using This?"}</h2>*/}
+            {/*<p>This project is used by all these people</p>*/}
+            {/*<div className="logos">{showcase}</div>*/}
+            {/*<div className="more-users">*/}
+              {/*<a*/}
+                {/*className="button"*/}
+                {/*href={*/}
+                  {/*siteConfig.baseUrl + this.props.language + '/' + 'users.html'*/}
+                {/*}>*/}
+                {/*More {siteConfig.title} Users*/}
+              {/*</a>*/}
+            {/*</div>*/}
+          {/*</div>*/}
         </div>
       </div>
     );
