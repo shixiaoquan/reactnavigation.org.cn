@@ -16,7 +16,7 @@ const users = [
 ];
 
 const siteConfig = {
-  title: '为未来构建的路由' /* title for your website */,
+  title: 'React Navigation' /* title for your website */,
   tagline: '为未来构建的路由',
   url: 'https://reactnavigation.org.cn' /* your website url */,
   baseUrl: '/content/' /* base url for your project */,
