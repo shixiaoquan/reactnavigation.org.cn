@@ -64,7 +64,7 @@ class HomeSplash extends React.Component {
                         // this.props.language +
                         '/getting-started.html'
                       }>
-                      开始吧！
+                      让我们愉快地开始吧！
                     </Button>
                   </div>
                 </div>
