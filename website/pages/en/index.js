@@ -61,7 +61,7 @@ class HomeSplash extends React.Component {
                       href={
                         siteConfig.baseUrl +
                         'docs/' +
-                        this.props.language +
+                        // this.props.language +
                         '/getting-started.html'
                       }>
                       开始吧！
