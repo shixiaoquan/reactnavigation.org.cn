@@ -18,7 +18,7 @@ const users = [
 const siteConfig = {
   title: 'React Navigation' /* title for your website */,
   tagline: 'Navigation for React Native',
-  url: 'https://reactnavigation.org' /* your website url */,
+  url: 'https://reactnavigation.org.cn' /* your website url */,
   baseUrl: '/content/' /* base url for your project */,
   projectName: 'react-navigation',
   headerLinks: [
