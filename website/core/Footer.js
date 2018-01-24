@@ -13,6 +13,8 @@ class Footer extends React.Component {
     return (
       <footer className="nav-footer" id="footer">
         <section className="sitemap">
+            <a href={'/'}>react-navigation中文网</a>
+            <a>有问题请联系 QQ：1010083274</a>
           {/*<a href={this.props.config.baseUrl} className="nav-home">*/}
             {/*<img*/}
               {/*src={this.props.config.baseUrl + this.props.config.footerIcon}*/}
