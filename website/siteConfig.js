@@ -24,7 +24,7 @@ const siteConfig = {
   headerLinks: [
     {doc: 'getting-started', label: '文档'},
     {blog: true, label: '博客'},
-    {doc: 'doc4', label: 'Demo', external: true},
+    {href: 'https://expo.io/@react-navigation/NavigationPlayground', label: '官方栗子', external: true},
     {href: 'https://github.com/react-navigation/react-navigation', label: 'GitHub', external: true},
   ],
   users,
