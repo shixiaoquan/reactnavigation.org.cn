@@ -36,9 +36,9 @@ class HomeSplash extends React.Component {
       <div className="homeContainer">
         <div className="homeSplashFade">
           <div className="wrapper homeWrapper">
-            <div className="projectLogo">
-              <img src={siteConfig.baseUrl + 'img/docusaurus.svg'} />
-            </div>
+            {/*<div className="projectLogo">*/}
+              {/*<img src={siteConfig.baseUrl + 'img/docusaurus.svg'} />*/}
+            {/*</div>*/}
             <div className="inner">
               <h2 className="projectTitle">
                 {siteConfig.title}
@@ -47,24 +47,24 @@ class HomeSplash extends React.Component {
               <div className="section promoSection">
                 <div className="promoRow">
                   <div className="pluginRowBlock">
-                    <Button href="#try">Try It Out </Button>
+                    {/*<Button href="#try">Try It Out </Button>*/}
+                    {/*<Button*/}
+                      {/*href={*/}
+                        {/*siteConfig.baseUrl +*/}
+                        {/*'docs/' +*/}
+                        {/*this.props.language +*/}
+                        {/*'/doc1.html'*/}
+                      {/*}>*/}
+                      {/*Example Link1*/}
+                    {/*</Button>*/}
                     <Button
                       href={
                         siteConfig.baseUrl +
                         'docs/' +
                         this.props.language +
-                        '/doc1.html'
+                        '/getting-started.html'
                       }>
-                      Example Link1
-                    </Button>
-                    <Button
-                      href={
-                        siteConfig.baseUrl +
-                        'docs/' +
-                        this.props.language +
-                        '/doc2.html'
-                      }>
-                      Example Link 2
+                      开始吧！
                     </Button>
                   </div>
                 </div>
