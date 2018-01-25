@@ -6,18 +6,17 @@ sidebar_label: 配置标题栏
 
 <!-- # Configuring the Header -->
 
-Header is only available for StackNavigator.
+标题仅适用于`StackNavigator`。
 
-In the previous example, we created a StackNavigator to display several screens in our app.
+在前面的例子中，我们创建了一个`StackNavigator`用来在我们的应用程序中展示几个页面。
 
-
-When navigating to a chat screen, we can specify params for the new route by providing them to the navigate function. In this case, we want to provide the name of the person on the chat screen:
+当跳转到聊天页面时，我们可以通过将它们提供给导航器来指定新路线的参数。 在这种情况下，我们希望在聊天页面上提供人员的姓名：
 
 ```js
 this.props.navigation.navigate('Chat', { user:  'Lucy' });
 ```
 
-The `user` param can be accessed from the chat screen:
+参数`user`可以从聊天界面访问：
 
 ```js
 class ChatScreen extends React.Component {
@@ -28,9 +27,9 @@ class ChatScreen extends React.Component {
 }
 ```
 
-### Setting the Header Title
+### 设置标题栏的标题
 
-Next, the header title can be configured to use the screen param:
+接下来，标题栏的标题可以配置为使用页面的参数：
 
 ```js
 class ChatScreen extends React.Component {
@@ -41,14 +40,14 @@ class ChatScreen extends React.Component {
 }
 ```
 
-```phone-example
-basic-header
-```
+<figure class="half">
+    <img src="https://reactnavigation.org/assets/examples/basic-header-android.png" width="300">
+    <img src="https://reactnavigation.org/assets/examples/basic-header-iphone.png" width="300">
+</figure>
 
+### 添加右侧的按钮
 
-### Adding a Right Button
-
-Then we can add a [`header` navigation option](/docs/navigators/navigation-options#Stack-Navigation-Options) that allows us to add a custom right button:
+然后我们可以添加一个允许我们添加一个自定义的右侧按钮的[`header` 选项](/docs/Screen-Nav-Options#Stack-Navigation-Options) ：
 
 ```js
 static navigationOptions = {
@@ -60,7 +59,7 @@ static navigationOptions = {
 header-button
 ```
 
-The navigation options can be defined with a [navigation prop](/docs/navigators/navigation-prop). Let's render a different button based on the route params, and set up the button to call `navigation.setParams` when pressed.
+导航选项可以使用[navigation prop](/docs/navigators/navigation-prop)）来定义。 让我们根据路由参数渲染一个不同的按钮，并设置按钮按下时调用`navigation.setParams`。
 
 ```js
 static navigationOptions = ({ navigation }) => {
@@ -79,17 +78,17 @@ static navigationOptions = ({ navigation }) => {
 };
 ```
 
-Now, the header can interact with the screen route/state:
+现在，标题可以与页面的路由或`state`交互了：
+<figure class="half">
+    <img src="https://reactnavigation.org/assets/examples/header-button-android.png" width="300">
+    <img src="https://reactnavigation.org/assets/examples/header-button-iphone.png" width="300">
+</figure>
 
-```phone-example
-header-interaction
-```
+### 屏幕组件与标题的交互
 
-### Header interaction with screen component
+有时，标题栏需要访问页面组件的属性，例如函数或`state`。
 
-Sometimes it is necessary for the header to access properties of the screen component such as functions or state.
-
-Let's say we want to create an 'edit contact info' screen with a save button in the header. We want the save button to be replaced by an `ActivityIndicator` while saving.
+比方说，我们要创建一个“编辑联系人信息”的页面，在标题中有一个保存按钮。 我们希望在保存时将保存按钮替换为一个`ActivityIndicator `。
 
 ```js
 class EditInfoScreen extends React.Component {
@@ -138,9 +137,24 @@ class EditInfoScreen extends React.Component {
 }
 ```
 
-**Note**: Since the `handleSave`-param is only set on component mount it is not immediately available in the `navigationOptions`-function. Before `handleSave` is set we pass down an empty function to the `Button`-component in order to make it render immediately and avoid flickering.
+**Note**: 由于`handleSave`参数只在组件挂载时设置，因此不能立即在`navigationOptions`函数中使用。 在`handleSave`设置之前，我们传递一个空的函数到`Button`-组件，以便立即渲染并避免闪烁。
+
+要查看其余的标题选项，请参阅 [navigation options document](/docs/Stack-Nav-Options#Stack-Navigation-Options).
+
+作为`setParams`的替代方法，您可能需要考虑使用状态管理库，例如[MobX](https://github.com/mobxjs/mobx) 或者 [Redux](https://github.com/reactjs/redux)，当页面跳转时，传递一个包含屏幕渲染所需数据的对象，以及可能要调用的函数，修改数据，发出网络请求等。这样， 屏幕组件和静态`navbarOptions`块将有权访问该对象。 当采用这种方法时，请确保考虑了深度链接，在只有JavaScript原函数被作为导航器属性传递到页面的情况下，效果最好。 如果需要进行深度链接，可以使用[higher order component (HOC)](https://reactjs.org/docs/higher-order-components.html)将原函数转换为屏幕组件所期望的对象。
 
 
-To see the rest of the header options, see the [navigation options document](/docs/navigators/navigation-options#Stack-Navigation-Options).
 
-As an alternative to `setParams`, you may want to consider using a state management library such as [MobX](https://github.com/mobxjs/mobx) or [Redux](https://github.com/reactjs/redux), and when navigating to a screen, pass an object which contains the data necessary for the screen to render, as well as functions you may want to call that modify the data, make network requests and etc. That way, both your screen component and the static `navbarOptions` block will have access to the object. When following this approach, make sure to consider deep linking, which works best in cases where only javascript primitives are passed as navigation props to your screen. In case when deep linking is necessary, you may use a [higher order component (HOC)](https://reactjs.org/docs/higher-order-components.html) to transform the primitives to the object your screen components expects.
+
+
+
+
+
+
+
+
+
+
+
+
+
