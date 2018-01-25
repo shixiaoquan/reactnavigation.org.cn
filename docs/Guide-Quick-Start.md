@@ -6,7 +6,6 @@ sidebar_label: 快速开始
 
 <!-- # Hello Mobile Navigation -->
 
-
 只需安装`react-navigation`的npm package, 就可以开始使用React Navigation了
 
 ### 使用 NPM 安装
@@ -116,7 +115,7 @@ const HomeScreen = ({ navigation }) => (
 ...
 ```
 
-懂了吧! 当然，这只是将[StackNavigator](/docs/navigators/stack)和React Navigation作为一个整体使用的的基础。
+懂了吧! 当然，这只是将[StackNavigator](/docs/StackNavigator)和React Navigation作为一个整体使用的的基础。
 这里是这个例子的完整代码:
 
 ```javascript
