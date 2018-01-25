@@ -62,7 +62,7 @@ class HomeSplash extends React.Component {
                         siteConfig.baseUrl +
                         'docs/' +
                         // this.props.language +
-                        '/getting-started.html'
+                        'Guide-Intro.html'
                       }>
                       让我们愉快地开始吧！
                     </Button>
