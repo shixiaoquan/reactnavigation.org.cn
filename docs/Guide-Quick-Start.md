@@ -6,6 +6,7 @@ sidebar_label: 快速开始
 
 <!-- # Hello Mobile Navigation -->
 
+
 只需安装`react-navigation`的npm package, 就可以开始使用React Navigation了
 
 ### 使用 NPM 安装
