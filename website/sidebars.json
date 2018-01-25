@@ -4,6 +4,6 @@
     "Navigators": ["Navigators"],
     "高级指南": ["Redux-Integration", "Web-Integration", "Deep-Linking", "Screen-Tracking", "CONTRIBUTING"],
     "Routers": ["Routers"],
-    "Views": []
+    "Views": ["Views"]
   }
 }
