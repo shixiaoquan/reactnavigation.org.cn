@@ -5,30 +5,29 @@ sidebar_label: 快速开始
 ---
 
 <!-- # Hello Mobile Navigation -->
+只需安装`react-navigation`的npm package, 就可以开始使用React Navigation了
 
-To get started with React Navigation, all you have to do is install the `react-navigation` npm package.
-
-### Install with NPM
+### 使用 NPM 安装
 
 ```
 npm install --save react-navigation
 ```
 
-### Install with Yarn
+### 使用 Yarn 安装
 
 ```
 yarn add react-navigation
 ```
 
-To start using React Navigation you'll have to create a navigator. React Navigation comes with three default navigators.
+要开始使用React Navigation，您必须先创建一个navigator，React Navigation带有三种默认的navigator。
 
-- `StackNavigator` - Provides a way for your app to transition between screens where each new screen is placed on top of a stack.
-- `TabNavigator` - Used to set up a screen with several tabs.
-- `DrawerNavigator` - Used to set up a screen with drawer navigation.
+- `StackNavigator` - 为应用程序提供了一种页面切换的方法，每次切换时，新的页面会放置在堆栈的顶部
+- `TabNavigator` - 用于设置具有多个Tab页的页面
+- `DrawerNavigator` - 用于设置抽屉导航的页面
 
-## Creating a StackNavigator
+## 创建 StackNavigator
 
-StackNavigator's are the most common form of navigator so we'll use it as a basic demonstration. To get started, create a `StackNavigator`.
+`StackNavigator `是最常见的一种`navigator`，所以我们将用其进行基本演示。 首先，创建一个`StackNavigator`。
 
 ```javascript
 import { StackNavigator } from 'react-navigation';
@@ -40,7 +39,7 @@ const RootNavigator = StackNavigator({
 export default RootNavigator;
 ```
 
-We can then add screens to this `StackNavigator`. Each key represents a screen.
+我们可以把页面添加到这个`StackNavigator`. 每个`key`代表着一个页面.
 
 ```javascript
 import React from 'react';
@@ -71,7 +70,7 @@ const RootNavigator = StackNavigator({
 export default RootNavigator;
 ```
 
-Now let's add a title to the navigation bar.
+现在让我们为导航栏添加一个标题。
 
 ```javascript
 ...
@@ -94,9 +93,9 @@ const RootNavigator = StackNavigator({
 export default RootNavigator;
 ```
 
-Finally, we should be able to navigate from the home screen to the details screen. When you register a component with a navigator that component will then have a `navigation` prop added to it. This `navigation` prop drives how we move between different screens.
+最后，我们将能够从`Home`页面跳转到`Details`页面。 当你用一个navigator注册一个组件时，这个组件将会添加一个`navigator`属性。 这个`navigator`属性能够控制不同页面间的跳转。
 
-To move from the home screen to the details screen we'll want to use `navigation.navigate`, like so:
+为了从`Home`页面跳转到`Details`页面，我们将使用 `navigation.navigate`，方法如下:
 
 ```javascript
 ...
@@ -115,13 +114,51 @@ const HomeScreen = ({ navigation }) => (
 ...
 ```
 
-And there you have it! That's the basics of using the [StackNavigator](/docs/navigators/stack), and React Navigation as a whole. Here's the full code from this example:
+懂了吧! 当然，这只是将[StackNavigator](/docs/navigators/stack)和React Navigation作为一个整体使用的的基础。 
+这里是这个例子的完整代码:
 
-<div class="snack" data-snack-id="HJlnU0XTb" data-snack-platform="ios" data-snack-preview="true" data-snack-theme="light" style="overflow:hidden;background:#fafafa;border:1px solid rgba(0,0,0,.16);border-radius:4px;height:505px;width:100%"></div>
+```javascript
+import React from 'react';
+import { View, Text, Button } from 'react-native';
+import { StackNavigator } from 'react-navigation'; // 1.0.0-beta.14
 
-## Creating a TabNavigator
+const HomeScreen = ({ navigation }) => (
+  <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+    <Text>Home Screen</Text>
+    <Button
+      onPress={() => navigation.navigate('Details')}
+      title="Go to details"
+    />
+  </View>
+);
 
-To get started with `TabNavigator` first import and create a new `RootTabs` component.
+const DetailsScreen = () => (
+  <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+    <Text>Details Screen</Text>
+  </View>
+);
+
+const RootNavigator = StackNavigator({
+  Home: {
+    screen: HomeScreen,
+    navigationOptions: {
+      headerTitle: 'Home',
+    },
+  },
+  Details: {
+    screen: DetailsScreen,
+    navigationOptions: {
+      headerTitle: 'Details',
+    },
+  },
+});
+
+export default RootNavigator;
+```
+
+## 创建 TabNavigator
+
+为了使用`TabNavigator`，首先导入`TabNavigator`并创建一个名为`RootTabs`的组件
 
 ```javascript
 import { TabNavigator } from 'react-navigation';
@@ -133,7 +170,8 @@ const RootTabs = TabNavigator({
 export default RootTabs;
 ```
 
-We then need to create some screens and add them to our `TabNavigator`.
+然后我们需要创建一些页面，并将它们添加到我们创建的的`TabNavigator`中。
+
 
 ```javascript
 import React from 'react';
@@ -165,8 +203,10 @@ export default RootTabs;
 ```
 
 Getting there! Now let's explicity set a label and icon for the tab bar.
+现在，我们给每个`Tab Bar`设置一个明确的标签
 
-> We'll be using [`react-native-vector-icons`](https://github.com/oblador/react-native-vector-icons) in the example. If you don't have it installed in your project already please do so.
+> 我们将在例子中使用[`react-native-vector-icons`](https://github.com/oblador/react-native-vector-icons)，
+> 如果你的项目中没有安装，请自行安装。
 
 ```javascript
 ...
@@ -206,15 +246,63 @@ const RootTabs = TabNavigator({
 export default RootTabs;
 ```
 
-This will ensure the `tabBarLabel` is consistent (important when using nested navigators) and it will set a `tabBarIcon`. This icon will only be visible on iOS by default given the tab bar component used, which aligns with standard design patterns on Android.
+这将确保`tabBarLabel`是一致的（使用嵌套的`navigator `时很重要），并且还会设置一个`tabBarIcon`。 这个图标默认情况下会在iOS上默认显示，因为它使用了标签栏组件，这与Android上的标准设计模式一致。
 
-You can view the complete finished code below:
+你可以在查看下面的完整代码:
 
-<div class="snack" data-snack-id="BJZ2GVVpb" data-snack-platform="ios" data-snack-preview="true" data-snack-theme="light" style="overflow:hidden;background:#fafafa;border:1px solid rgba(0,0,0,.16);border-radius:4px;height:505px;width:100%"></div>
+```javascript
+import React from 'react';
+import { View, Text } from 'react-native';
+import { TabNavigator } from 'react-navigation'; // 1.0.0-beta.14
+import Ionicons from 'react-native-vector-icons/Ionicons'; // Supported builtin module
 
-## Creating a DrawerNavigator
+const HomeScreen = () => (
+  <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+    <Text>Home Screen</Text>
+  </View>
+);
 
-To get started with `DrawerNavigator` first import and create a new `RootDrawer` component.
+const ProfileScreen = () => (
+  <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+    <Text>Profile Screen</Text>
+  </View>
+);
+
+const RootTabs = TabNavigator({
+  Home: {
+    screen: HomeScreen,
+    navigationOptions: {
+      tabBarLabel: 'Home',
+      tabBarIcon: ({ tintColor, focused }) => (
+        <Ionicons
+          name={focused ? 'ios-home' : 'ios-home-outline'}
+          size={26}
+          style={{ color: tintColor }}
+        />
+      ),
+    },
+  },
+  Profile: {
+    screen: ProfileScreen,
+    navigationOptions: {
+      tabBarLabel: 'Profile',
+      tabBarIcon: ({ tintColor, focused }) => (
+        <Ionicons
+          name={focused ? 'ios-person' : 'ios-person-outline'}
+          size={26}
+          style={{ color: tintColor }}
+        />
+      ),
+    },
+  },
+});
+
+export default RootTabs;
+```
+
+## 创建 DrawerNavigator
+
+为了使用`DrawerNavigator `，首先导入`DrawerNavigator `并创建一个名为`RootDrawer`的组件.
 
 ```javascript
 import { DrawerNavigator } from 'react-navigation';
@@ -226,7 +314,7 @@ const RootDrawer = DrawerNavigator({
 export default RootDrawer;
 ```
 
-We then need to create some screens and add them to our `DrawerNavigator`.
+然后我们需要创建一些页面，并将它们添加到我们创建的的`DrawerNavigator `中。
 
 ```javascript
 import React from 'react';
@@ -257,9 +345,10 @@ const RootDrawer = DrawerNavigator({
 export default RootDrawer;
 ```
 
-Getting there! Now let's explicity set a label and icon for the drawer items.
+现在，我们给每个`DrawerItem`设置一个明确的标签和图标
 
-> We'll be using `react-native-vector-icons` in the example. If you don't have it installed in your project already please do so.
+> 我们将在例子中使用[`react-native-vector-icons`](https://github.com/oblador/react-native-vector-icons)，
+> 如果你的项目中没有安装，请自行安装。
 
 ```javascript
 ...
@@ -299,7 +388,9 @@ const RootDrawer = DrawerNavigator({
 export default RootDrawer;
 ```
 
-To open the drawer you can swipe from the left edge of the screen to the right. You've also got the option to open the drawer view `navigation.navigate('DrawerToggle')`, which we'll add to the Home component now. Make sure you import the `Button` component from `react-native`.
+要打开抽屉，你可以从屏幕左侧向右滑动,也可以选择使用我们即将添加到`Home `组件的方法`navigation.navigate（'DrawerToggle'）`。 
+
+确保你已经从`react-native`中导入了`Button`组件。
 
 ```javascript
 ...
@@ -317,6 +408,55 @@ const HomeScreen = ({ navigation }) => (
 ...
 ```
 
-You can view the finished code below.
+你可以查看下面的完整代码：
 
-<div class="snack" data-snack-id="rk90N44a-" data-snack-platform="ios" data-snack-preview="true" data-snack-theme="light" style="overflow:hidden;background:#fafafa;border:1px solid rgba(0,0,0,.16);border-radius:4px;height:505px;width:100%"></div>
+```javascript
+import React from 'react';
+import { View, Text } from 'react-native';
+import { DrawerNavigator } from 'react-navigation'; // 1.0.0-beta.14
+import Ionicons from 'react-native-vector-icons/Ionicons'; // Supported builtin module
+
+const HomeScreen = () => (
+  <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+    <Text>Home Screen</Text>
+  </View>
+);
+
+const ProfileScreen = () => (
+  <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+    <Text>Profile Screen</Text>
+  </View>
+);
+
+
+const RootDrawer = DrawerNavigator({
+  Home: {
+    screen: HomeScreen,
+    navigationOptions: {
+      drawerLabel: 'Home',
+      drawerIcon: ({ tintColor, focused }) => (
+        <Ionicons
+          name={focused ? 'ios-home' : 'ios-home-outline'}
+          size={26}
+          style={{ color: tintColor }}
+        />
+      ),
+    },
+  },
+  Profile: {
+    screen: ProfileScreen,
+    navigationOptions: {
+      drawerLabel: 'Profile',
+      drawerIcon: ({ tintColor, focused }) => (
+        <Ionicons
+          name={focused ? 'ios-person' : 'ios-person-outline'}
+          size={26}
+          style={{ color: tintColor }}
+        />
+      ),
+    },
+  },
+});
+
+export default RootDrawer;
+```
