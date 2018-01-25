@@ -1,4 +1,10 @@
-## Custom Router API
+---
+ id: RoutersAPI
+title: 路由接口
+sidebar_label: 路由接口
+---
+
+<!-- ## Custom Router API -->
 
 You can make your own router by building an object with the following functions:
 

@@ -1,4 +1,10 @@
-# TabRouter
+---
+ id: TabRouter
+title: TabRouter
+sidebar_label: TabRouter
+---
+
+<!-- # TabRouter -->
 
 Manage a set of tabs in the application, handle jumping to tabs, and handle the back button press to jump to the initial tab.
 

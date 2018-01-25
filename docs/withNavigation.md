@@ -1,3 +1,8 @@
+---
+ id: withNavigation
+title: withNavigation
+sidebar_label: withNavigation
+---
 
 # withNavigation
 

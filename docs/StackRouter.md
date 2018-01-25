@@ -1,4 +1,10 @@
-# StackRouter
+---
+ id: StackRouter
+title: StackRouter
+sidebar_label: StackRouter
+---
+
+<!-- # StackRouter -->
 
 Manage the logical navigation stack, including pushing, popping, and handling path parsing to create a deep stack.
 
