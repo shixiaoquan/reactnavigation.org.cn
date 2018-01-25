@@ -1,5 +1,10 @@
+---
+ id: Screen-Navigation-Prop
+title: Screen-Navigation-Prop
+sidebar_label: Screen-Navigation-Prop
+---
 
-# Screen Navigation Prop
+<!-- # Screen Navigation Prop -->
 
 Each *screen* in your app will receive a navigation prop which contain the following:
 * `navigate` - (helper) link to other screens

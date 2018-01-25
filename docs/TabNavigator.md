@@ -1,4 +1,10 @@
-# TabNavigator
+---
+ id: TabNavigator
+title: TabNavigator
+sidebar_label: TabNavigator
+---
+
+<!-- # TabNavigator -->
 
 Used to easily set up a screen with several tabs with a TabRouter. For a live example please see [our expo demo](https://exp.host/@react-navigation/NavigationPlayground).
 
@@ -149,7 +155,7 @@ tabBarOptions: {
     fontSize: 12,
   },
   tabStyle: {
-    width: 100,    
+    width: 100,
   },
   style: {
     backgroundColor: 'blue',

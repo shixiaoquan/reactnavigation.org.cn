@@ -1,4 +1,10 @@
-# StackNavigator
+---
+ id: StackNavigator
+title: StackNavigator
+sidebar_label: StackNavigator
+---
+
+<!-- # StackNavigator -->
 
 Provides a way for your app to transition between screens where each new screen is placed on top of a stack.
 
@@ -97,7 +103,7 @@ Visual options:
 
 #### `title`
 
-String that can be used as a fallback for `headerTitle`. Additionally, will be used as a fallback for `tabBarLabel` (if nested in a TabNavigator) or `drawerLabel` (if nested in a DrawerNavigator). 
+String that can be used as a fallback for `headerTitle`. Additionally, will be used as a fallback for `tabBarLabel` (if nested in a TabNavigator) or `drawerLabel` (if nested in a DrawerNavigator).
 
 #### `header`
 

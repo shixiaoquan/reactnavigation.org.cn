@@ -1,7 +1,7 @@
 {
   "docs": {
     "入门": ["Guide-Intro", "Guide-Quick-Start", "Guide-Basic-Example", "Guide-Nested", "Guide-Headers"],
-    "Navigators": ["Navigators"],
+    "Navigators": ["Navigators", "StackNavigator", "TabNavigator", "DrawerNavigator", "Screen-Navigation-Prop", "Navigation-Actions", "Screen-Nav-Options", "Custom-Navigators"],
     "高级指南": ["Redux-Integration", "Web-Integration", "Deep-Linking", "Screen-Tracking", "CONTRIBUTING"],
     "Routers": ["Routers"],
     "Views": ["Views"]

@@ -1,4 +1,10 @@
-# DrawerNavigator
+---
+ id: DrawerNavigator
+title: DrawerNavigator
+sidebar_label: DrawerNavigator
+---
+
+<!-- # DrawerNavigator -->
 
 Used to easily set up a screen with a drawer navigation. For a live example please see [our expo demo](https://exp.host/@react-navigation/NavigationPlayground).
 

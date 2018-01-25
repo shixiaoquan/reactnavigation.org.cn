@@ -1,4 +1,10 @@
-# Navigation Actions
+---
+ id: Navigation-Actions
+title: Navigation事件
+sidebar_label: Navigation事件
+---
+
+<!-- # Navigation Actions -->
 
 All Navigation Actions return an object that can be sent to the router using `navigation.dispatch()` method.
 

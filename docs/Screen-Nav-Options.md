@@ -1,5 +1,10 @@
+---
+ id: Screen-Nav-Options
+title: Screen-Nav-Options
+sidebar_label: Screen-Nav-Options
+---
 
-# Screen Navigation Options
+<!-- # Screen Navigation Options -->
 
 Each screen can configure several aspects about how it gets presented in parent navigators.
 
