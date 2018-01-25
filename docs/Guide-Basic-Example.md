@@ -182,7 +182,6 @@ export const SimpleApp = StackNavigator({
 });
 ```
 
-Now you can navigate to your new screen, and go back:
 现在，你可以跳转到新的页面，然后返回：
 <figure class="half">
     <img src="https://reactnavigation.org/assets/examples/first-navigation-android.png" width="300">
