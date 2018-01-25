@@ -1,5 +1,5 @@
 ---
-<!-- id: Guide-Intro -->
+ id: Guide-Intro
 title: 介绍
 sidebar_label: 介绍
 ---
