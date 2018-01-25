@@ -16,7 +16,7 @@ const users = [
 ];
 
 const siteConfig = {
-  title: 'React Navigation' /* title for your website */,
+  title: 'React Navigation中文网' /* title for your website */,
   tagline: '路由定义了URI、操作和导航状态之间的关系，以及移动应用，Web应用和服务端渲染之间共享导航的逻辑',
   url: 'https://reactnavigation.org.cn' /* your website url */,
   baseUrl: '/content/' /* base url for your project */,
