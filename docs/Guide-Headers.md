@@ -139,7 +139,7 @@ class EditInfoScreen extends React.Component {
 
 **Note**: 由于`handleSave`参数只在组件挂载时设置，因此不能立即在`navigationOptions`函数中使用。 在`handleSave`设置之前，我们传递一个空的函数到`Button`-组件，以便立即渲染并避免闪烁。
 
-要查看其余的标题选项，请参阅 [navigation options document](/docs/Stack-Nav-Options#Stack-Navigation-Options).
+要查看其余的标题选项，请参阅 [navigation options document](/docs/Screen-Nav-Options#Stack-Navigation-Options).
 
 作为`setParams`的替代方法，您可能需要考虑使用状态管理库，例如[MobX](https://github.com/mobxjs/mobx) 或者 [Redux](https://github.com/reactjs/redux)，当页面跳转时，传递一个包含屏幕渲染所需数据的对象，以及可能要调用的函数，修改数据，发出网络请求等。这样， 屏幕组件和静态`navbarOptions`块将有权访问该对象。 当采用这种方法时，请确保考虑了深度链接，在只有JavaScript原函数被作为导航器属性传递到页面的情况下，效果最好。 如果需要进行深度链接，可以使用[higher order component (HOC)](https://reactjs.org/docs/higher-order-components.html)将原函数转换为屏幕组件所期望的对象。
 
