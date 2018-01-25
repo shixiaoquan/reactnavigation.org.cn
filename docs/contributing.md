@@ -1,8 +1,10 @@
 ---
-id: contributing
-title: React Navigation contributing guide
-sidebar_label: Contributing guide
+ id: CONTRIBUTING
+title: React Navigation贡献指南
+sidebar_label: React Navigation贡献指南
 ---
+
+# React Navigation Contributor Guide
 
 Want to help improve React Navigation? Your help would be greatly appreciated!
 

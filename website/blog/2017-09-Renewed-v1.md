@@ -1,8 +1,6 @@
----
-title: A (Renewed) Path to React Navigation V1
-author: Spencer Carli
-authorURL: http://twitter.com/spencer_carli
----
+# A (Renewed) Path to React Navigation V1
+
+*September 12, 2017*
 
 It’s been awhile since the last post on this blog and I wanted to take a moment to bring everyone up to speed on what’s been going on with React Navigation.
 

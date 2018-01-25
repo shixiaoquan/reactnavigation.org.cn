@@ -1,4 +1,10 @@
-# Web Integration
+---
+ id: Web-Integration
+title: Web集成
+sidebar_label: Web集成
+---
+
+<!-- # Web Integration -->
 
 React Navigation routers work on web and allow you to share navigation logic with native apps. The views currently bundled in `react-navigation` currently only work on React Native, but that may change with future-facing projects like [react-primitives](https://github.com/lelandrichardson/react-primitives).
 
