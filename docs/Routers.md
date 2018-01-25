@@ -1,10 +1,13 @@
 ---
-id: routers
+ id: Routers
 title: Routers
 sidebar_label: Routers
 ---
 
+<!-- # Routers -->
+
 Routers define a component's navigation state, and they allow the developer to define paths and actions that can be handled.
+
 
 ## Built-In Routers
 
@@ -89,7 +92,7 @@ MyStackRouter.router.getStateForAction = (action, state) => {
     // has been handled/blocked, but there is not a new state
     return null;
   }
-  
+
   return defaultGetStateForAction(action, state);
 };
 ```

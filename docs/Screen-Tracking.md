@@ -1,10 +1,14 @@
 ---
-id: screen-tracking
-title: Screen tracking
-sidebar_label: Screen tracking
+ id: Screen-Tracking
+title: 屏幕跟踪和分析
+sidebar_label: 屏幕跟踪和分析
 ---
 
-This example shows how to do screen tracking and send to Google Analytics. The approach can be adapted to any other analytics SDK. 
+<!-- # Screen tracking and analytics -->
+
+This example shows how to do screen tracking and send to Google Analytics. The approach can be adapted to any other mobile analytics SDK.
+
+## Screen tracking
 
 When using built-in navigation container, we can use `onNavigationStateChange` to track the screen.
 
@@ -44,7 +48,7 @@ export default () => (
 );
 ```
 
-### Screen tracking with Redux
+## Screen tracking with Redux
 
 When using Redux, we can write a Redux middleware to track the screen. For this purpose,
 we will reuse `getCurrentRouteName` from the previous section.
@@ -77,7 +81,7 @@ const screenTracking = ({ getState }) => next => (action) => {
 export default screenTracking;
 ```
 
-### Create Redux store and apply the above middleware
+## Create Redux store and apply the above middleware
 
 The `screenTracking` middleware can be applied to the store during its creation. See [Redux Integration](Redux-Integration.md) for details.
 
