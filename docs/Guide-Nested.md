@@ -6,13 +6,13 @@ sidebar_label: 嵌套导航
 
 <!-- # Nesting Navigators -->
 
-It is common in mobile apps to compose various forms of navigation. The routers and navigators in React Navigation are composable, which allows you to define a complicated navigation structure for your app.
+组合使用各种形式的导航在移动应用中是常见的，React Navination中的路由和导航是可组合的，这使你可以为你的应用定义一个复杂的导航结构
 
-For our chat app, we want to put several tabs on the first screen, to view recent chat threads or all contacts.
+对于我们的聊天应用程序，我们希望在第一个屏幕上放置几个Tab，以查看最近的聊天记录或所有联系人。
 
-## Introducing Tab Navigator
+## 介绍 Tab Navigator
 
-Lets create a new `TabNavigator` in our `App.js`:
+在`App.js`中创建一个新的`TabNavigator`：
 
 ```js
 import { TabNavigator } from "react-navigation";
@@ -36,18 +36,17 @@ const MainScreenNavigator = TabNavigator({
 ```
 
 If the `MainScreenNavigator` was rendered as the top-level navigator component, it would look like this:
+如果`MainScreenNavigator `渲染为顶部导航组件，则它将如下所示：
+<figure class="half">
+    <img src="https://reactnavigation.org/assets/examples/simple-tabs-android.png" width="300">
+    <img src="https://reactnavigation.org/assets/examples/simple-tabs-iphone.png" width="300">
+</figure>
 
-```phone-example
-simple-tabs
-```
+## 将导航器嵌套到页面中
 
+我们希望这些选项卡在应用程序的首屏中可见，但堆栈中的新页面应该覆盖这些选项卡。
 
-
-## Nesting a Navigator in a screen
-
-We want these tabs to be visible in the first screen of the app, but new screens in the stack should cover the tabs.
-
-Lets add our tabs navigator as a screen in our top-level `StackNavigator` that we set up in the [previous step](/docs/intro/).
+让我们将`TabNavigator`作为页面添加到我们[上一节](/docs/Guide-Intro)中设置的顶层`StackNavigator`中.
 
 ```js
 const SimpleApp = StackNavigator({
@@ -56,7 +55,7 @@ const SimpleApp = StackNavigator({
 });
 ```
 
-Because `MainScreenNavigator` is being used as a screen, we can give it `navigationOptions`:
+因为`MainScreenNavigator`正在被当作一个页面使用，所以我们可以给他设置`navigationOptions`
 
 ```js
 const SimpleApp = StackNavigator({
@@ -70,7 +69,7 @@ const SimpleApp = StackNavigator({
 })
 ```
 
-Lets also add a button to each tab that links to a chat:
+让我们也为链接到聊天页面的每个标签添加一个按钮：
 
 ```js
 <Button
@@ -79,14 +78,15 @@ Lets also add a button to each tab that links to a chat:
 />
 ```
 
-Now we have put one navigator inside another, and we can `navigate` between navigators:
+现在我们把一个导航器放在另一个导航器中，这样就可以在导航器之间使用`navigate`方法了：
+<figure class="half">
+    <img src="https://reactnavigation.org/assets/examples/nested-android.png" width="300">
+    <img src="https://reactnavigation.org/assets/examples/nested-iphone.png" width="300">
+</figure>
 
-```phone-example
-nested
-```
+## 将导航器嵌套在组件中
 
-## Nesting a Navigator in a Component
-Sometimes it is desirable to nest a navigator that is wrapped in a component. This is useful in cases where the navigator only takes up part of the screen. For the child navigator to be wired into the navigation tree, it needs the `navigation` property from the parent navigator.
+有时需要嵌套一个被包装的导航器到组件中。 这在导航器只占用屏幕一部分空间的情况下非常有用。 为了将子导航器连接到导航树中，需要父导航器的`navigation`属性。
 
 ```js
 const SimpleApp = StackNavigator({
@@ -94,9 +94,10 @@ const SimpleApp = StackNavigator({
   Chat: { screen: ChatScreen },
 });
 ```
-In this case, the NavigatorWrappingScreen is not a navigator, but it renders a navigator as part of its output.
 
-If this navigator renders blank then change `<View>` to `<View style={{flex: 1}}>`.
+在这种情况下，`NavigatorWrappingScreen `不是导航器，但是它将导航器作为其输出的一部分。
+
+如果此导航器呈现空白，则将`<View>`更改为`<View style = {{flex：1}}>`。
 
 ```js
 class NavigatorWrappingScreen extends React.Component {
@@ -112,6 +113,7 @@ class NavigatorWrappingScreen extends React.Component {
 ```
 
 To wire `MainScreenNavigator` into the navigation tree, we assign its `router` to the wrapping component. This makes `NavigatorWrappingScreen` "navigation aware", which tells the parent navigator to pass the navigation object down. Since the `NavigatorWrappingScreen`'s `router` is overridden with the child navigator's `router`, the child navigator will receive the needed `navigation`.
+为了将`MainScreenNavigator`连接到导航树中，我们将其`router`分配给包装组件。 这使得`NavigatorWrappingScreen`导航感知，它告诉父导航器向下传递导航对象。 由于`NavigatorWrappingScreen`的`router`被子导航器的`router`覆盖，因此子导航器将接收所需的`navigation`。
 
 ```js
 class NavigatorWrappingScreen extends React.Component {
