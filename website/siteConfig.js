@@ -22,7 +22,7 @@ const siteConfig = {
   baseUrl: '/content/' /* base url for your project */,
   projectName: 'react-navigation',
   headerLinks: [
-    {doc: 'guides/Guide-Intro', label: '文档'},
+    {doc: 'Guide-Intro', label: '文档'},
     {blog: true, label: '博客'},
     {href: 'https://expo.io/@react-navigation/NavigationPlayground', label: '官方栗子', external: true},
     {href: 'https://github.com/react-navigation/react-navigation', label: 'GitHub', external: true},
