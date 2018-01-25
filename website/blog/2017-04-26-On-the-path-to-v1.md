@@ -1,6 +1,7 @@
-# On the path to React Navigation v1
-
-*April 26, 2017*
+---
+title: On the path to React Navigation V1
+author: React Navigation
+---
 
 When we announced React Navigation earlier this year, the core team was blown away at the community's overwhelming excitement and support for the new project. Since the launch in late January, hundreds of contributors have sprung up, reported detailed issues, and committed important fixes to the library.
 

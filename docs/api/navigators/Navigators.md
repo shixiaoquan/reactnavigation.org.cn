@@ -1,10 +1,4 @@
----
- id: Navigators
-title: Navigators
-sidebar_label: Navigators
----
-
-<!-- # Navigators -->
+# Navigators
 
 Navigators allow you to define your application's navigation structure. Navigators also render common elements such as headers and tab bars which you can configure.
 
@@ -28,7 +22,7 @@ To learn how to create screens, read about:
 
 ### Calling Navigate on Top Level Component
 
-In case you want to use Navigator from the same level you declare it you can use react's [`ref`](https://facebook.github.io/react/docs/refs-and-the-dom.html#the-ref-callback-attribute) option:
+In case you want to use Navigator from the same level you declare it you can use react's [`ref`](https://facebook.github.io/react/docs/refs-and-the-dom.html#the-ref-callback-attribute) option:  
 ```js
 import { NavigationActions } from 'react-navigation';
 
@@ -48,7 +42,7 @@ class App extends React.Component {
   }
 }
 ```
-Please notice that this solution should only be used on the top level navigator.
+Please notice that this solution should only be used on the top level navigator.  
 
 ## Navigation Containers
 
@@ -58,7 +52,7 @@ When rendering one of the included navigators, the navigation prop is optional. 
 
 For the purpose of convenience, the built-in navigators have this ability because behind the scenes they use `createNavigationContainer`. Usually, navigators require a navigation prop in order to function.
 
-Top-level navigators accept the following props:
+Top-level navigators accept the following props:  
 
 ### `onNavigationStateChange(prevState, newState, action)`
 

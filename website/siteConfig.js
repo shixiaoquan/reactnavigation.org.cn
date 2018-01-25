@@ -17,15 +17,15 @@ const users = [
 
 const siteConfig = {
   title: 'React Navigation' /* title for your website */,
-  tagline: '路由定义了URI、操作和导航状态之间的关系，以及移动应用，Web应用和服务端渲染之间共享导航的逻辑',
-  url: 'https://reactnavigation.org.cn' /* your website url */,
+  tagline: 'Navigation for React Native',
+  url: 'https://reactnavigation.org' /* your website url */,
   baseUrl: '/content/' /* base url for your project */,
   projectName: 'react-navigation',
   headerLinks: [
-    {doc: 'Guide-Intro', label: '文档'},
-    {blog: true, label: '博客'},
-    {href: 'https://expo.io/@react-navigation/NavigationPlayground', label: '官方栗子', external: true},
-    {href: 'https://github.com/react-navigation/react-navigation', label: 'GitHub', external: true},
+    {doc: 'getting-started', label: 'Docs'},
+    {doc: 'doc4', label: 'API'},
+    {page: 'help', label: 'Help'},
+    {blog: true, label: 'Blog'},
   ],
   users,
   /* path to images for header/footer */
@@ -38,7 +38,7 @@ const siteConfig = {
     secondaryColor: '#eee',
   },
   // This copyright info is used in /core/Footer.js and blog rss/atom feeds.
-  copyright: 'shixiaoquan',
+  copyright: 'None',
   // organizationName: 'deltice', // or set an env variable ORGANIZATION_NAME
   // projectName: 'test-site', // or set an env variable PROJECT_NAME
   highlight: {

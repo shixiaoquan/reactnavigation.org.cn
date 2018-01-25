@@ -1,9 +1,3 @@
----
-id: Guide-Basic-Example
-title:基础范例
-sidebar_label: 基础范例
----
-
 # Hello Mobile Navigation
 
 Let's use React Navigation to build a simple chat-like application for Android and iOS.
