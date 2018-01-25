@@ -1,9 +1,9 @@
 {
   "docs": {
     "入门": ["Guide-Intro", "Guide-Quick-Start", "Guide-Basic-Example", "Guide-Nested", "Guide-Headers"],
-    "Navigators": [],
+    "Navigators": ["Navigators"],
     "高级指南": ["Redux-Integration", "Web-Integration", "Deep-Linking", "Screen-Tracking", "CONTRIBUTING"],
-    "Routers": [],
+    "Routers": ["Routers"],
     "Views": []
   }
 }
