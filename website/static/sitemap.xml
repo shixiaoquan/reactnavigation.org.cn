@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://www.reactnavigation.org.cn/docs/guide-intro</loc>
+  <lastmod>Learn once, navigate anywhere.
+
+React Navigation的诞生，源于React Native社区对基于Javascript的可扩展且使用简单的导航解决方案的需求。</lastmod>
+</url>
+<url>
+  <loc>https://www.reactnavigation.org.cn/docs/navigators</loc>
+  <lastmod>导航器允许你定义应用程序的导航结构。 导航器还可以渲染通用元素，例如可以配置标题栏和选项卡栏。
+
+实际上导航器只是普通的React组件。</lastmod>
+</url>
+<url>
+  <loc>https://www.reactnavigation.org.cn/docs/redux-integration</loc>
+  <lastmod>Redux集成</lastmod>
+</url>
+<url>
+  <loc>https://www.reactnavigation.org.cn/docs/routers</loc>
+  <lastmod>Routers
+Routers define a compo</lastmod>
+</url>
+
+
+</urlset>
