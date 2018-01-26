@@ -6,9 +6,7 @@ sidebar_label: StackNavigator
 
 <!-- # StackNavigator -->
 
-Provides a way for your app to transition between screens where each new screen is placed on top of a stack.
-
-By default the StackNavigator is configured to have the familiar iOS and Android look & feel: new screens slide in from the right on iOS, fade in from the bottom on Android. On iOS the StackNavigator can also be configured to a modal style where screens slide in from the bottom.
+默认情况下，`StackNavigator`被配置为拥有相似的iOS和Android外观：新的页面在iOS上从右侧滑入，在Android上从底部淡入。 在iOS上，`StackNavigator`也可以配置为页面从底部滑入。
 
 ```jsx
 
@@ -38,7 +36,7 @@ const ModalStack = StackNavigator({
 });
 ```
 
-## API Definition
+## API 定义
 
 ```js
 StackNavigator(RouteConfigs, StackNavigatorConfig)
@@ -46,7 +44,7 @@ StackNavigator(RouteConfigs, StackNavigatorConfig)
 
 ### RouteConfigs
 
-The route configs object is a mapping from route name to a route config, which tells the navigator what to present for that route.
+路由配置对象是从路由名称到路由配置的映射，告诉导航器该路由应该呈现什么。
 
 ```js
 StackNavigator({
@@ -74,30 +72,29 @@ StackNavigator({
 
 ### StackNavigatorConfig
 
-Options for the router:
+`router`的选项：
 
-- `initialRouteName` - Sets the default screen of the stack. Must match one of the keys in route configs.
-- `initialRouteParams` - The params for the initial route
-- `navigationOptions` - Default navigation options to use for screens
-- `paths` - A mapping of overrides for the paths set in the route configs
+- `initialRouteName` - 设置堆栈的默认页面。 必须匹配`RouteConfigs`中的一个`key`。
+- `initialRouteParams` - 初始化路由的参数
+- `navigationOptions` - 用于页面的默认导航选项
+- `paths` - 用于覆盖`RouteConfigs`中设置的`path`的一个映射
 
-Visual options:
+视觉选项:
 
-- `mode` - Defines the style for rendering and transitions:
-  - `card` - Use the standard iOS and Android screen transitions. This is the default.
-  - `modal` - Make the screens slide in from the bottom which is a common iOS pattern. Only works on iOS, has no effect on Android.
-- `headerMode` - Specifies how the header should be rendered:
-  - `float` - Render a single header that stays at the top and animates as screens are changed. This is a common pattern on iOS.
-  - `screen` - Each screen has a header attached to it and the header fades in and out together with the screen. This is a common pattern on Android.
-  - `none` - No header will be rendered.
-- `cardStyle` - Use this prop to override or extend the default style for an individual card in stack.
-- `transitionConfig` - Function to return an object that is merged with the default screen transitions (take a look at TransitionConfig in [type definitions](https://github.com/react-community/react-navigation/blob/master/src/TypeDefinition.js)). Provided function will be passed the following arguments:
-	- `transitionProps` - Transition props for the new screen.
-	- `prevTransitionProps` - Transitions props for the old screen.
-	- `isModal` - Boolean specifying if screen is modal.
-- `onTransitionStart` - Function to be invoked when the card transition animation is about to start.
-- `onTransitionEnd` - Function to be invoked once the card transition animation completes.
-
+- `mode` - 定义页面渲染和转换的风格：
+  - `card` - 使用标准的iOS和Android页面转换风格，此项为缺省。
+  - `modal` - 使页面从屏幕底部滑入，这是一种常见的iOS模式。 只适用于iOS，在Android上不起作用。
+- `headerMode` - 定义标题该如何渲染：
+  - `float` - 渲染一个放在顶部的标题栏，并在页面改变时显示动画。 这是iOS上的常见模式。
+  - `screen` - 每个页面上都有一个标题栏，标题栏与页面一起淡入淡出。 这是Android上的常见模式。
+  - `none` - 没有标题栏
+- `cardStyle` - 使用这个属性覆盖或者扩展堆栈中单个`Card`的默认样式。
+- `transitionConfig` - 返回一个与默认页面的`transitionConfig`(参见[类型定义](https://github.com/react-community/react-navigation/blob/master/src/TypeDefinition.js))合并的对象的函数。 提供的函数将传递以下参数：
+	- `transitionProps` - 新页面跳转的属性。
+	- `prevTransitionProps` - 上一个页面跳转的属性
+	- `isModal` - 指定页面是否为`modal`。
+- `onTransitionStart` - `card`跳转动画开始时要调用的函数。
+- `onTransitionEnd` - `card`跳转动画结束时要调用的函数。
 
 ### Screen Navigation Options
 
