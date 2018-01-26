@@ -1,7 +1,7 @@
 ---
  id: Transitioner
-title: Transitioner
-sidebar_label: Transitioner
+title: 转变器
+sidebar_label: 转变器
 ---
 
 <!-- # Transitioner -->

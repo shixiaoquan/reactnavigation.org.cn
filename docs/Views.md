@@ -1,10 +1,10 @@
 ---
  id: Views
-title: Views
-sidebar_label: Views
+title: 视图概述
+sidebar_label: 视图概述
 ---
 
-# Views
+# <!--Views-->
 
 Navigation views are presentation components that take a [`router`](/docs/api/routers) and a [`navigation`](/docs/navigators/navigation-prop) prop, and can display several screens, as specified by the `navigation.state`.
 
