@@ -1,7 +1,7 @@
 ---
  id: Screen-Navigation-Prop
-title: Screen-Navigation-Prop
-sidebar_label: Screen-Navigation-Prop
+title: Navigation属性
+sidebar_label: Navigation属性
 ---
 
 <!-- # Screen Navigation Prop -->

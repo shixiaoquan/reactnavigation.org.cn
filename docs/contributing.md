@@ -1,7 +1,7 @@
 ---
  id: CONTRIBUTING
 title: React Navigation贡献指南
-sidebar_label: React Navigation贡献指南
+sidebar_label: 贡献指南
 ---
 
 # React Navigation Contributor Guide

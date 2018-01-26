@@ -1,7 +1,7 @@
 ---
  id: Screen-Tracking
-title: 屏幕跟踪和分析
-sidebar_label: 屏幕跟踪和分析
+title: 页面跟踪和分析
+sidebar_label: 页面跟踪和分析
 ---
 
 <!-- # Screen tracking and analytics -->

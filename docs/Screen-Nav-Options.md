@@ -1,7 +1,7 @@
 ---
  id: Screen-Nav-Options
-title: Screen-Nav-Options
-sidebar_label: Screen-Nav-Options
+title: Navigation配置项
+sidebar_label: Navigation配置项
 ---
 
 <!-- # Screen Navigation Options -->

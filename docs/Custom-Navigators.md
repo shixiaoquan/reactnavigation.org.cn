@@ -1,7 +1,7 @@
 ---
  id: Custom-Navigators
-title: Custom Navigators
-sidebar_label: Custom Navigators
+title: 自定义Navigator
+sidebar_label: 自定义Navigator
 ---
 
 <!-- # Custom Navigators -->
