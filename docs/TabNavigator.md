@@ -98,7 +98,7 @@ TabNavigator(RouteConfigs, TabNavigatorConfig)
 传递到底层路由，用于修改导航逻辑的几个选项：
 
 - `initialRouteName` - 第一次加载`tab bar`时路由的`routeName` 
-- `order` - 定义了`tab bar`顺序的一个``routeNames`数组
+- `order` - 定义了`tab bar`顺序的一个`routeNames`数组
 - `paths` - 提供`routeName `到`path config`的映射，它覆盖了`routeConfigs`中设置的`path`。
 - `backBehavior` - 返回按钮是否会导致`tab`切换到初始tab页？ 如果是，则设置为`initialRoute`，否则为`none`。 缺省为`initialRoute`。
 
