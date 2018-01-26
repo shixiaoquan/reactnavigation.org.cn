@@ -1,7 +1,7 @@
 ---
  id: Navigators
-title: Navigators
-sidebar_label: Navigators
+title: 简介
+sidebar_label: 简介
 ---
 
 <!-- # Navigators -->
