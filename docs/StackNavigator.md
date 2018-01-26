@@ -100,76 +100,76 @@ StackNavigator({
 
 #### `title`
 
-String that can be used as a fallback for `headerTitle`. Additionally, will be used as a fallback for `tabBarLabel` (if nested in a TabNavigator) or `drawerLabel` (if nested in a DrawerNavigator).
+可当作`headerTitle`的备用的字符串。 此外，将用作`tabBarLabel`（如果嵌套在TabNavigator中）或`drawerLabel`（如果嵌套在DrawerNavigator中）的后备。
 
 #### `header`
 
-React Element or a function that given `HeaderProps` returns a React Element, to display as a header. Setting to `null` hides header.
+可以是React元素或给定了`HeaderProps`然后返回一个React元素的函数，显示为标题。 设置为`null`隐藏标题。
 
 #### `headerTitle`
 
-String, React Element or React Component used by the header. Defaults to scene `title`. When a component is used, it receives `allowFontScaling`, `style` and `children` props. The title string is passed in `children`.
+字符串、React元素或被当作标题的React组件。默认显示`title`属性的值。当使用一个组件时，它会收到`allowFontScaling`，`style`和`children`属性。 标题字符串在`children`中进行传递。
 
 #### `headerTitleAllowFontScaling`
 
-Whether header title font should scale to respect Text Size accessibility settings. Defaults to true.
+标题栏中标题字体是否应该缩放取决于文本大小是否可以设置。 默认为true。
 
 #### `headerBackTitle`
 
-Title string used by the back button on iOS, or `null` to disable label. Defaults to the previous scene's `headerTitle`.
+iOS上的返回按钮的文字使用的字符串，或者使用`null`来禁用。 默认为上一个页面的`headerTitle`。
 
 #### `headerTruncatedBackTitle`
 
-Title string used by the back button when `headerBackTitle` doesn't fit on the screen. `"Back"` by default.
+当`headerBackTitle `不适合在屏幕显示时（一般是因为文字太多），返回按钮使用的标题字符串。 默认是`Back`。
 
 #### `headerRight`
 
-React Element to display on the right side of the header.
+显示在标题栏右侧的React元素。
 
 #### `headerLeft`
 
-React Element or Component to display on the left side of the header. When a component is used, it receives a number of props when rendered (`onPress`, `title`, `titleStyle` and more - check `Header.js` for the complete list).
+用于在标题栏左侧展示的React元素或组件。当一个组件被渲染时，它会接收到很多的属性（`onPress`, `title`, `titleStyle` 等等， - 请检查 `Header.js` 的完整列表）
 
 #### `headerStyle`
 
-Style object for the header
+标题栏的样式
 
 #### `headerTitleStyle`
 
-Style object for the title component
+标题栏中标题的样式
 
 #### `headerBackTitleStyle`
 
-Style object for the back title
+标题栏中返回按钮标题的样式
 
 #### `headerTintColor`
 
-Tint color for the header
+标题栏的色调
 
 #### `headerPressColorAndroid`
 
-Color for material ripple (Android >= 5.0 only)
+material design中的波纹颜色 (仅支持Android >= 5.0)
 
 #### `gesturesEnabled`
 
-Whether you can use gestures to dismiss this screen. Defaults to true on iOS, false on Android.
+是否可以使用手势来关闭此页面。 在iOS上默认为true，在Android上默认为false。
 
 #### `gestureResponseDistance`
 
-Object to override the distance of touch start from the edge of the screen to recognize gestures. It takes the following properties:
+一个对象，用以覆盖从屏幕边缘开始触摸到手势被识别的距离。 它具有以下属性：
 
-- `horizontal` - *number* - Distance for horizontal direction. Defaults to 25.
-- `vertical` - *number* - Distance for vertical direction. Defaults to 135.
+- `horizontal` - *数值型* - 水平方向的距离，默认值25
+- `vertical` - *数值型* - 垂直方向的距离，默认值135.
 
 #### `gestureDirection`
 
-String to override the direction for dismiss gesture. `default` for normal behaviour or `inverted` for right-to-left swipes.
+字符串，用来设置关闭页面的手势方向，默认（`default`）是从做往右，`inverted`是从右往左
 
 ### Navigator Props
 
-The navigator component created by `StackNavigator(...)` takes the following props:
+使用`StackNavigator(...)`方法创建的导航组件，使用了如下属性：
 
-- `screenProps` - Pass down extra options to child screens, for example:
+- `screenProps` - 传递其他选项给子页面，例如：
 
 
  ```jsx
@@ -182,13 +182,13 @@ The navigator component created by `StackNavigator(...)` takes the following pro
  />
  ```
 
-### Examples
+### 栗子
 
-See the examples [SimpleStack.js](https://github.com/react-community/react-navigation/tree/master/examples/NavigationPlayground/js/SimpleStack.js) and [ModalStack.js](https://github.com/react-community/react-navigation/tree/master/examples/NavigationPlayground/js/ModalStack.js) which you can run locally as part of the [NavigationPlayground](https://github.com/react-community/react-navigation/tree/master/examples/NavigationPlayground) app.
+请参阅这些栗子 [SimpleStack.js](https://github.com/react-community/react-navigation/tree/master/examples/NavigationPlayground/js/SimpleStack.js) and [ModalStack.js](https://github.com/react-community/react-navigation/tree/master/examples/NavigationPlayground/js/ModalStack.js) 。 它们作为[NavigationPlayground](https://github.com/react-community/react-navigation/tree/master/examples/NavigationPlayground) 应用的一部分，你可以在本地运行
 
-You can view these examples directly on your phone by visiting [our expo demo](https://exp.host/@react-navigation/NavigationPlayground).
+你也可以直接在手机上查看这些示例，方法是访问[our expo demo](https://exp.host/@react-navigation/NavigationPlayground).
 
-#### Modal StackNavigator with Custom Screen Transitions
+#### 自定义页面跳转方式的`StackNavigator`
 
  ```js
 const ModalNavigator = StackNavigator(
@@ -230,4 +230,4 @@ const ModalNavigator = StackNavigator(
 );
  ```
 
-Header transitions can also be configured using `headerLeftInterpolator`, `headerTitleInterpolator` and `headerRightInterpolator` fields under `transitionConfig`.
+标题也可以使用`transitionConfig`中的`headerLeftInterpolator`，`headerTitleInterpolator`和`headerRightInterpolator`字段进行配置。
