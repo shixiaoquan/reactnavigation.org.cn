@@ -1,7 +1,7 @@
 ---
  id: RoutersAPI
-title: 路由接口
-sidebar_label: 路由接口
+title: 自定义路由接口
+sidebar_label: 自定义路由接口
 ---
 
 <!-- ## Custom Router API -->
