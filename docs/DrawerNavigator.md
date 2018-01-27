@@ -174,12 +174,11 @@ contentOptions: {
 #### `drawerLockMode`
 指定抽屉的[lock mode](https://facebook.github.io/react-native/docs/drawerlayoutandroid.html#drawerlockmode) 。 也可以在顶级路由中使用`screenProps.drawerLockMode`动态更新。
 
-### Navigator Props
+### Navigator 属性
 
-The navigator component created by `DrawerNavigator(...)` takes the following props:
+使用 `DrawerNavigator(...)`方法创建的导航组件，拥有如下属性
 
-- `screenProps` - Pass down extra options to child screens, for example:
-
+- `screenProps` - 将其他选项传递给子页面，例如：
 
  ```jsx
  const DrawerNav = DrawerNavigator({
@@ -191,6 +190,6 @@ The navigator component created by `DrawerNavigator(...)` takes the following pr
  />
  ```
 
- ### Nesting `DrawerNavigation`
+ ### 嵌套 `DrawerNavigation`
 
-Please bear in mind that if you nest the DrawerNavigation, the drawer will show below the parent navigation.
+请注意，如果你嵌套了`DrawerNavigation`，则抽屉会显示在父导航的下方。 
