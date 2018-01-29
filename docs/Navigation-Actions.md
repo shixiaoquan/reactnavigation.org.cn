@@ -44,11 +44,11 @@ this.props.navigation.dispatch(navigateAction)
 ```
 
 ### Reset
-The `Reset` action wipes the whole navigation state and replaces it with the result of several actions.
+`Reset`方法清除了所有的`navigation`属性，使用多个方法的结果替换了
 
-- `index` - *number* - required - Index of the active route on `routes` array in navigation `state`.
-- `actions` - *array* - required - Array of Navigation Actions that will replace the navigation state.
-- `key` - *string or null* - optional - If set, the navigator with the given key will reset. If null, the root navigator will reset.
+- `index` - *数字型* - 必选项 - `navigation.state.routers`数组中当前`router`的索引
+- `actions` - *数组* - 必选项 - 将要替换`navigation.state`的Action数组
+- `key` - *字符串 或 null* - 可选项 - `navigator`将会使用设置的key重置；如果是`null`，根`navigator`将会重置
 
 ```js
 import { NavigationActions } from 'react-navigation'
@@ -62,11 +62,10 @@ const resetAction = NavigationActions.reset({
 this.props.navigation.dispatch(resetAction)
 
 ```
-#### How to use the `index` parameter
-The `index` param is used to specify the current active route.
+#### 如何使用`index`参数
+`index`参数用于指定当前的路由。
 
-eg: given a basic stack navigation with two routes `Profile` and `Settings`.
-To reset the state to a point where the active screen was `Settings` but have it stacked on top of a `Profile` screen, you would do the following:
+例如: 给定一个有两个路由（`Profile` 和 `Settings`）的基础班`stack navigation`,如果要将状态重置为：当前页面是`Settings`，但是它要在`Profile`上层，则需要执行以下操作：
 
 ```js
 import { NavigationActions } from 'react-navigation'
@@ -83,9 +82,8 @@ this.props.navigation.dispatch(resetAction)
 ```
 
 ### Back
-
-Go back to previous screen and close current screen. `back` action creator takes in one optional parameter:
-- `key` - *string or null* - optional - If set, navigation will go back from the given key. If null, navigation will go back from the currently active route.
+返回到上一个页面，并且关闭当前页面。`back`方法带了一个可选的参数：
+- `key` - *字符串 或 null* - 可选项 - 如果设置了，`navigation`将从key对应的页面返回；如果是`null`，则从当前页面返回
 
 ```js
 import { NavigationActions } from 'react-navigation'
@@ -98,11 +96,10 @@ this.props.navigation.dispatch(backAction)
 ```
 
 ### SetParams
+当调用 `SetParams`方法时，路由将会返回一个改变了特定路由参数的状态
 
-When dispatching `SetParams`, the router will produce a new state that has changed the params of a particular route, as identified by the key
-
-- `params` - *object* - required - New params to be merged into existing route params
-- `key` - *string* - required - Route key that should get the new params
+- `params` - *对象* - 必选项 - 被合并到当前路由参数中的新的参数
+- `key` - *字符串* - 必选项 - 应该获得新参数的路由标识
 
 ```js
 import { NavigationActions } from 'react-navigation'
