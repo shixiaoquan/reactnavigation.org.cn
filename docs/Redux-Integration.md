@@ -6,7 +6,7 @@ sidebar_label: Redux集成
 
 <!-- # Redux Integration -->
 
-### Overview For Redux Integration
+### Redux集成概述
 1. 想要在redux中处理你的应用程序的 `navigation` 状态，您可以将自己的 `navigation` 属性传递给 `navigator ` 。
 
 2. 一旦将自己的 `navigation` 属性传递给 `navigator ` ，默认的[`navigation`](https://reactnavigation.org/docs/navigators/navigation-prop) 属性就会被销毁。你可能需要传递你想要访问的 `navigation` 属性。通常 [`state`](https://reactnavigation.org/docs/navigators/navigation-prop#state-The-screen's-current-stateroute) 和 [`dispatch`](https://reactnavigation.org/docs/navigators/navigation-prop#dispatch-Send-an-action-to-the-router) 的属性会被传递给 `navigator ` 。你将在本教程中学习如何传递这些属性。 既然你已经销毁了默认的属性，如果你尝试调用一些你没有明确传递的东西，那么它将不起作用。 因此，如果你没有将`dispatch`传递给 `navigator ` ，并且只传递了 `state` ，那么您将无法访问组件中的 `dispatch` 方法。
