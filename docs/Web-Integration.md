@@ -6,17 +6,18 @@ sidebar_label: Web集成
 
 <!-- # Web Integration -->
 
-React Navigation routers work on web and allow you to share navigation logic with native apps. The views currently bundled in `react-navigation` currently only work on React Native, but that may change with future-facing projects like [react-primitives](https://github.com/lelandrichardson/react-primitives).
+React Navigation路由在网络上运行并且允许你与本地应用共享导航逻辑。目前在 `react-navigation` 中绑定的视图只能在React Native上使用，但可能会随着[react-primitives](https://github.com/lelandrichardson/react-primitives)等将来的项目而改变。
 
-## Example App
-
-[This website](https://reactnavigation.org/) is [built with](https://github.com/react-community/react-navigation/blob/master/website/) React Navigation, specifically using `createNavigator` and `TabRouter`.
-
-See the source code of the site here: [App.js](https://github.com/react-community/react-navigation/blob/master/website/src/App.js).
-
-To see how the app gets rendered on the server, see [Server.js](https://github.com/react-community/react-navigation/blob/master/website/src/Server.js). On the browser, the App wakes up and gets rendered with [BrowserAppContainer.js](https://github.com/react-community/react-navigation/blob/master/website/src/BrowserAppContainer.js).
+## 示例应用
+[英文官网](https://reactnavigation.org/) 就是用使用React Navigation [构建](https://github.com/react-community/react-navigation/blob/master/website/) 的，特别是使用了`createNavigator` 和 `TabRouter`
 
 
-## More Coming Soon
+[中文官网（react-navigation中文网）](https://reactnavigation.org.cn/) 使用[docusaurus](https://docusaurus.io/) 创建
 
-Soon this guide will be replaced with a more thorough walkthrough of react-navigation usage on the web.
+在这里查看 [App.js](https://github.com/react-community/react-navigation/blob/master/website/src/App.js) 源代码。
+
+查看应用如何在服务端渲染的，请参阅 [Server.js](https://github.com/react-community/react-navigation/blob/master/website/src/Server.js) ；在浏览中，应用唤醒和渲染使用了 [BrowserAppContainer.js](https://github.com/react-community/react-navigation/blob/master/website/src/BrowserAppContainer.js) 。
+
+
+## 更多内容即将推出
+很快，本指南将被更全面的react-navigation在web上的用法所取代
