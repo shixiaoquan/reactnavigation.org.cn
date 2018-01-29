@@ -6,11 +6,10 @@ sidebar_label: 页面跟踪和分析
 
 <!-- # Screen tracking and analytics -->
 
-This example shows how to do screen tracking and send to Google Analytics. The approach can be adapted to any other mobile analytics SDK.
+此示例展示了如何执行页面跟踪并发送给Google Analytics。 该方法可以适用于任何其他的移动应用分析SDK。
 
-## Screen tracking
-
-When using built-in navigation container, we can use `onNavigationStateChange` to track the screen.
+## 页面跟踪
+当使用内置的 `navigation` 容器时，我们可以使用 `onNavigationStateChange` 方法来跟踪页面
 
 ```js
 import { GoogleAnalyticsTracker } from 'react-native-google-analytics-bridge';
@@ -48,10 +47,8 @@ export default () => (
 );
 ```
 
-## Screen tracking with Redux
-
-When using Redux, we can write a Redux middleware to track the screen. For this purpose,
-we will reuse `getCurrentRouteName` from the previous section.
+## 使用了Redux的页面跟踪
+使用Redux时，我们可以编写一个Redux中间件来跟踪页面。为了这个目的，我们将重用上一节的 `getCurrentRouteName` 方法
 
 ```js
 import { NavigationActions } from 'react-navigation';
@@ -81,10 +78,9 @@ const screenTracking = ({ getState }) => next => (action) => {
 export default screenTracking;
 ```
 
-## Create Redux store and apply the above middleware
-
-The `screenTracking` middleware can be applied to the store during its creation. See [Redux Integration](Redux-Integration.md) for details.
-
+## 创建Redux存储并应用上面的中间件
+ `screenTracking` 中间件可以在创建时应用到存储中，有关详细信息，请参阅[Redux集成](Redux-Integration.md)
+ 
 ```js
 const store = createStore(
   combineReducers({
