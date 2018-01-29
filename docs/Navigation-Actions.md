@@ -6,25 +6,26 @@ sidebar_label: Navigation事件
 
 <!-- # Navigation Actions -->
 
-All Navigation Actions return an object that can be sent to the router using `navigation.dispatch()` method.
+所有导航操作都会返回一个可以使用`navigation.dispatch()`方法发送给路由的对象。
 
-Note that if you want to dispatch react-navigation actions you should use the action creators provided in this library.
+如果你想分发react-navigation的事件，你必须使用该库提供的·`action creators`
 
-The following actions are supported:
-* [Navigate](#Navigate) - Navigate to another route
-* [Reset](#Reset) - Replace current state with a new state
-* [Back](#Back) - Go back to previous state
-* [Set Params](#SetParams) - Set Params for given route
-* [Init](#Init) - Used to initialize first state if state is undefined
+支持以下事件：
 
-The action creator functions define `toString()` to return the action type, which enables easy usage with third-party Redux libraries, including redux-actions and redux-saga.
+* [Navigate](#Navigate) - 导航到其他路由
+* [Reset](#Reset) - 使用新的`state`替换当前的`state`
+* [Back](#Back) - 返回到上一个`state`
+* [Set Params](#SetParams) - 设置给定的路由的参数
+* [Init](#Init) - 如果状态未定义，则用于初始化第一个状态
+
+动作创建函数定义了`toString()`方法来返回事件类型，这使得第三方的Redux库很容易使用，包括[`redux-actions`](https://github.com/reduxactions/redux-actions)和[`redux-saga`](https://github.com/redux-saga/redux-saga)。
 
 ### Navigate
-The `Navigate` action will update the current state with the result of a `Navigate` action.
+`Navigate`将使用`Navigate`事件执行的结果来更新当前的状态
 
-- `routeName` - *String* - Required - A destination routeName that has been registered somewhere in the app's router
-- `params` - *Object* - Optional - Params to merge into the destination route
-- `action` - *Object* - Optional - (advanced) The sub-action to run in the child router, if the screen is a navigator. Any one of the actions described in this doc can be set as a sub-action.
+- `routeName` - *字符串* - 必须 - 已在应用程序的路由器中注册的目标路由名称
+- `params` - *Object* - 可选 - 合并到目标路由中的参数
+- `action` - *Object* - 可选 - (高级）如果页面是`navigator`，则是在子路由中运行的子操作。 有关`action`的完整列表，请参阅[Actions Doc](/docs/Navigation-Actions)）。
 
 ```js
 import { NavigationActions } from 'react-navigation'
@@ -42,9 +43,7 @@ this.props.navigation.dispatch(navigateAction)
 
 ```
 
-
 ### Reset
-
 The `Reset` action wipes the whole navigation state and replaces it with the result of several actions.
 
 - `index` - *number* - required - Index of the active route on `routes` array in navigation `state`.

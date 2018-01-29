@@ -25,8 +25,8 @@ sidebar_label: Navigation属性
 `navigate(routeName, params, action)`
 
 - `routeName` - 已在应用程序的路由器中注册的目标路由名称
-- `params` - 合并带目标路由中的参数
-- `action` - (advanced) The sub-action to run in the child router, if the screen is a navigator. See [Actions Doc](navigation-actions) for a full list of supported actions. （高级）如果页面是`navigator`，则是在子路由中运行的子操作。 有关`action`的完整列表，请参阅[Actions Doc](/docs/Navigation-Actions)）。
+- `params` - 合并到目标路由中的参数
+- `action` - （高级）如果页面是`navigator`，则是在子路由中运行的子操作。 有关`action`的完整列表，请参阅[Actions Doc](/docs/Navigation-Actions)）。
 
 ```js
 class HomeScreen extends React.Component {
