@@ -4,11 +4,11 @@ title: withNavigation
 sidebar_label: withNavigation
 ---
 
-# withNavigation
+<!--# withNavigation-->
 
-[`withNavigation`](/src/views/withNavigation.js) is a Higher Order Component which passes the `navigation` prop into a wrapped Component. It's useful when you cannot pass the `navigation` prop into the component directly, or don't want to pass it in case of a deeply nested child.
+[`withNavigation`](https://github.com/react-navigation/react-navigation/blob/master/src/views/withNavigation.js) 是一个高阶组件，它将 `navigation` 属性传递给一个包装了的组件。 当你无法将 `navigation` 属性直接传递给组件时，或者在深度嵌套的子组件中不想传递它时，这个组件将很有用。
 
-## Example
+## 栗子
 
 ```js
 import { Button } 'react-native';
