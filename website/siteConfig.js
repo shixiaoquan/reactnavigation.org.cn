@@ -21,7 +21,12 @@ const siteConfig = {
   url: 'https://reactnavigation.org.cn' /* your website url */,
   baseUrl: '/content/' /* base url for your project */,
   projectName: 'react-navigation',
+  algolia: {
+    apiKey: "66f2a36406a99cf1312af16ba1ff44f4",
+    indexName: "reactnavigation_cn"
+  },
   headerLinks: [
+    { search: true },
     {doc: 'Guide-Intro', label: '文档'},
     {blog: true, label: '博客'},
     {href: 'https://expo.io/@react-navigation/NavigationPlayground', label: '官方栗子', external: true},
