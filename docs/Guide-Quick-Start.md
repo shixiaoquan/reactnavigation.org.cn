@@ -94,7 +94,7 @@ const RootNavigator = StackNavigator({
 export default RootNavigator;
 ```
 
-最后，我们将能够从`Home`页面跳转到`Details`页面。 当你用一个navigator注册一个组件时，这个组件将会添加一个`navigator`属性。 这个`navigator`属性能够控制不同页面间的跳转。
+最后，我们将能够从`Home`页面跳转到`Details`页面。 当你用一个navigator注册一个组件时，这个组件将会添加一个属性 `navigation` 。 这个属性能够控制不同页面间的跳转。
 
 为了从`Home`页面跳转到`Details`页面，我们将使用 `navigation.navigate`，方法如下:
 
