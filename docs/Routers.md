@@ -12,8 +12,8 @@ sidebar_label: 路由概述
 
 `react-navigation` 附带的一些标准路由：
 
-- [StackRouter](/docs/routers/stack)
-- [TabRouter](/docs/routers/tab)
+- [StackRouter](/docs/StackRouter)
+- [TabRouter](/docs/TabRouter)
 
 
 ## 使用路由

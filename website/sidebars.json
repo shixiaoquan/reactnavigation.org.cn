@@ -3,7 +3,7 @@
     "入门": ["Guide-Intro", "Guide-Quick-Start", "Guide-Basic-Example", "Guide-Nested", "Guide-Headers"],
     "Navigators": ["Navigators", "StackNavigator", "TabNavigator", "DrawerNavigator", "Screen-Navigation-Prop", "Navigation-Actions", "Screen-Nav-Options", "Custom-Navigators"],
     "高级指南": ["Redux-Integration", "Web-Integration", "Deep-Linking", "Screen-Tracking", "CONTRIBUTING"],
-    "路由": ["Routers", "RoutersAPI", "StackRouter", "StackRouter"],
+    "路由": ["Routers", "RoutersAPI", "StackRouter", "TabRouter"],
     "视图": ["Views", "Transitioner", "withNavigation"]
   }
 }
