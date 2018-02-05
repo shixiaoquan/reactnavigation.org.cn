@@ -29,7 +29,7 @@ const siteConfig = {
     { search: true },
     {doc: 'Guide-Intro', label: '文档'},
     {blog: true, label: '博客'},
-    {href: 'https://expo.io/@react-navigation/NavigationPlayground', label: '官方栗子', external: true},
+    {href: 'https://expo.io/@react-navigation/NavigationPlayground', label: '官方例子', external: true},
     {href: 'https://github.com/react-navigation/react-navigation', label: 'GitHub', external: true},
   ],
   users,
