@@ -66,6 +66,10 @@ class HomeSplash extends React.Component {
                       }>
                       让我们愉快地开始吧！
                     </Button>
+                    <Button
+                      href={'https://github.com/shixiaoquan/reactnavigation.org.cn'}>
+                      网站源码，GitHub地址
+                    </Button>
                   </div>
                 </div>
               </div>
