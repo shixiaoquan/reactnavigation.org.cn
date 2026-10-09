@@ -44,8 +44,8 @@ npm start
 
 确保您可以看到示例应用程序在iOS和/或Android上成功运行：
 <figure class="half">
-    <img src="https://reactnavigation.org/assets/examples/bare-project-android.png" width="300">
-    <img src="https://reactnavigation.org/assets/examples/bare-project-iphone.png" width="300">
+    <img src="/content/img/examples/bare-project-android.png" width="300">
+    <img src="/content/img/examples/bare-project-iphone.png" width="300">
 </figure>
 
 我们希望在iOS和Android上共享代码，所以我们先删除index.js的内容（或者是index.ios.js和index.android.js的内容，如果你使用的React Native是0.49之前的版本），然后用`import './App'`替换它。这之后，我们需要为我们的应用程序的实现创建一个新的文件`App.js`（如果您使用`create-react-native-app`，则已经完成）
@@ -119,8 +119,8 @@ const styles = StyleSheet.create({
 
 现在iPhone和Android应用程序都应该显示相同的页面：
 <figure class="half">
-    <img src="https://reactnavigation.org/assets/examples/first-screen-android.png" width="300">
-    <img src="https://reactnavigation.org/assets/examples/first-screen-iphone.png" width="300">
+    <img src="/content/img/examples/first-screen-android.png" width="300">
+    <img src="/content/img/examples/first-screen-iphone.png" width="300">
 </figure>
 
 ## 新增一个页面
@@ -184,8 +184,8 @@ export const SimpleApp = StackNavigator({
 
 现在，你可以跳转到新的页面，然后返回：
 <figure class="half">
-    <img src="https://reactnavigation.org/assets/examples/first-navigation-android.png" width="300">
-    <img src="https://reactnavigation.org/assets/examples/first-navigation-iphone.png" width="300">
+    <img src="/content/img/examples/first-navigation-android.gif" width="300">
+    <img src="/content/img/examples/first-navigation-iphone.gif" width="300">
 </figure>
 
 ## 传参
@@ -237,6 +237,6 @@ class ChatScreen extends React.Component {
 Now you can see the name when you navigate to the Chat screen. Try changing the `user` param in `HomeScreen` and see what happens!
 现在，可以在跳转到`Chat`页面时看到传递过来的名字。 尝试改变`HomeScreen`中的`user`参数，看看会发生什么！
 <figure class="half">
-    <img src="https://reactnavigation.org/assets/examples/first-navigation-android.png" width="300">
-    <img src="https://reactnavigation.org/assets/examples/first-navigation-iphone.png" width="300">
+    <img src="/content/img/examples/first-navigation-android.gif" width="300">
+    <img src="/content/img/examples/first-navigation-iphone.gif" width="300">
 </figure>

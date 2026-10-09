@@ -38,8 +38,8 @@ const MainScreenNavigator = TabNavigator({
 If the `MainScreenNavigator` was rendered as the top-level navigator component, it would look like this:
 如果`MainScreenNavigator `渲染为顶部导航组件，则它将如下所示：
 <figure class="half">
-    <img src="https://reactnavigation.org/assets/examples/simple-tabs-android.png" width="300">
-    <img src="https://reactnavigation.org/assets/examples/simple-tabs-iphone.png" width="300">
+    <img src="/content/img/examples/simple-tabs-android.gif" width="300">
+    <img src="/content/img/examples/simple-tabs-iphone.gif" width="300">
 </figure>
 
 ## 将导航器嵌套到页面中
@@ -80,8 +80,8 @@ const SimpleApp = StackNavigator({
 
 现在我们把一个导航器放在另一个导航器中，这样就可以在导航器之间使用`navigate`方法了：
 <figure class="half">
-    <img src="https://reactnavigation.org/assets/examples/nested-android.png" width="300">
-    <img src="https://reactnavigation.org/assets/examples/nested-iphone.png" width="300">
+    <img src="/content/img/examples/nested-android.gif" width="300">
+    <img src="/content/img/examples/nested-iphone.gif" width="300">
 </figure>
 
 ## 将导航器嵌套在组件中

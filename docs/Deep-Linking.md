@@ -66,7 +66,7 @@ const MainApp = () => <SimpleApp uriPrefix={prefix} />;
 
 在Xcode中，使用 `SimpleApp/ios/SimpleApp.xcodeproj` 打开项目。 在侧边栏中选择项目并导航到信息选项卡。 向下滚动到“网址类型”并添加一个。 在新的URL类型中，将标识符和url方案设置为您所需的url方案。
 
-![添加了mychat的Xcode项目信息URL类型](https://reactnavigation.org/assets/xcode-linking.png)
+![添加了mychat的Xcode项目信息URL类型](/content/img/xcode-linking.png)
 
 现在你可以在Xcode中点击“run”，或者在命令行上重新构建：
 
