@@ -41,8 +41,8 @@ class ChatScreen extends React.Component {
 ```
 
 <figure class="half">
-    <img src="https://reactnavigation.org/assets/examples/basic-header-android.png" width="300">
-    <img src="https://reactnavigation.org/assets/examples/basic-header-iphone.png" width="300">
+    <img src="/content/img/examples/basic-header-android.png" width="300">
+    <img src="/content/img/examples/basic-header-iphone.png" width="300">
 </figure>
 
 ### 添加右侧的按钮
@@ -80,8 +80,8 @@ static navigationOptions = ({ navigation }) => {
 
 现在，标题可以与页面的路由或`state`交互了：
 <figure class="half">
-    <img src="https://reactnavigation.org/assets/examples/header-button-android.png" width="300">
-    <img src="https://reactnavigation.org/assets/examples/header-button-iphone.png" width="300">
+    <img src="/content/img/examples/header-button-android.png" width="300">
+    <img src="/content/img/examples/header-button-iphone.png" width="300">
 </figure>
 
 ### 屏幕组件与标题的交互

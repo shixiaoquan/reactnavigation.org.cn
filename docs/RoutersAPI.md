@@ -26,7 +26,7 @@ class MyNavigator extends React.Component {
 }
 ```
 
-![路由管理着URI、操作和导航状态之间的关系](https://reactnavigation.org/assets/routers-concept-map.png)
+![路由管理着URI、操作和导航状态之间的关系](/content/img/routers-concept-map.png)
 
 
 ### `getStateForAction(action, state)`
